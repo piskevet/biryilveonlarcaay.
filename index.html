@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Sayın Tuana,</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* Selam!</span><br />
+				<span class="space"/><span class="comments">* Ne kadar çoğunu anlamicak olsanda 1. yılımıza özel biraz kod yazdım.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				ben i = <span class="keyword">new</span> Erkek(<span class="string">"Batuhan"</span>);<br />
+				sen u = <span class="keyword">new</span> Kız(<span class="string">"Tuana"</span>);<br />
+				<span class="comments">// 16 Eylül, 2024, Çıkmaya başladığımız gün. </span><br />
+				i.seviyor(u);<br />
+				<span class="comments">// Dizilerde olucak bir şekilde tanıştık aslında,</span><br />
+				tanisma();<br />
+				<span class="comments">// Mr. High sayesinde.</span><br />
+				<span class="comments">// O günden beridir konuşuyoruz.</span><br />
+				iliskimiz(u);<br />
+				<span class="comments">// İyisiyle kötüsüyle,</span><br />
+				<span class="comments">// bir şekilde bugünlere geldik.</span><br />
+				<span class="keyword">boolean</span> mutluMu = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (mutluMu == false) {<br />
+				<span class="placeholder"/>i.destek(u);<br />
+				<span class="placeholder"/><span class="comments">// Kötü günlerimizde birbirimizi destekledik.</span><br />
+				<span class="placeholder"/><span class="comments">// (Senleyken Mutsuzluk zor olsada)...</span><br />
+				<span class="placeholder"/>mutluMu = u.mutlu();<br />
+				<span class="placeholder"/>u.mutlu = i.mutlu();<br />
+				}<br />
+				<span class="comments">// Onca ay ve 1 yıl sonunda şuanki durumdayız.</span><br />
+				i.seviyor(u);<br />
+				(sure = 365) = 1 YIL();<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						ㅤㅤㅤㅤㅤㅤㅤㅤTam olarak 
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						'dir seni seviyorum<br/>
+                         ve devam edeceğim.<br/>
+						<div class="signature">-Batuhan</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Tuana = <a href="https://www.instagram.com/tuanaa_yaman/">İnstagram</a>.     
+			Batuhan = <a href="https://www.instagram.com/piskevet_/">İnstagram</a>.<br />
+			Copyright © 2024 <a href='https://www.instagram.com/puskivet/'>Piskevet</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2024, 8, 16);
+		together.setHours(3);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 9000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 100);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
